@@ -1,0 +1,56 @@
+exclude: "^(src/kokkos)"
+
+repos:
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace  # auto-fix trailing whitespaces
+      - id: end-of-file-fixer  # add EOF "\n" if missing
+      #- id: no-commit-to-branch  # forbid direct commits to master # suspend this since it fails CIs on master with github
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-nodejs
+    rev: v1.1.2
+    hooks:
+      - id: markdown-toc
+        files: README.md
+
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.128
+    hooks:
+      - id: ruff
+        args:
+        - --quiet
+        - --fix
+        - --select
+        - F # pyflakes
+        - B # flake8-bugbear
+        - I # isort
+
+  - repo: https://github.com/neutrinoceros/inifix
+    rev: v3.0.0
+    hooks:
+      - id: inifix-format
+
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.3.1
+    hooks:
+      - id: remove-tabs  # auto-fix tab/space mixing
+      - id: insert-license
+        files: ^(src/).*\.(hpp|cpp)$
+        args:
+        - --license-filepath
+        - src/license_header.txt
+        - --comment-style
+        - //
+
+  - repo: https://gitlab.com/daverona/pre-commit/cpp
+    rev: 0.8.0
+    hooks:
+      - id: cpplint
+        args: [--counting=detailed, --exclude=test/*]
