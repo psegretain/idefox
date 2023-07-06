@@ -5,4 +5,4 @@ Contributors
 
 Standards
 ------------
-Sycl is the best one
+Sycl is the best one, but kokkos is good enough
