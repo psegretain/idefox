@@ -5,6 +5,8 @@ Contributors
 - Robert Clément
 - Jean-François Gonzalez
 - Clément Robert
+- Davide Dionese
+- Victor Réville
 - Jonah Mauxion
 - Jérémy Fensch
 - Matthew Roberts
