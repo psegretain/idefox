@@ -1,5 +1,0 @@
-Contributors
-------------
-
-
-- Clément Robert
