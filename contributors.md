@@ -5,6 +5,7 @@ Contributors
 - Robert Clément
 - Jean-François Gonzalez
 - Clément Robert
+- Timothée David--Cléris
 - Remi Zerna
 - Davide Dionese
 - Victor Réville
@@ -16,3 +17,8 @@ Contributors
 - Nicolas Scepi
 - Jean Kempf
 - Victor Réville
+
+
+Standards
+------------
+Sycl is the best one, but kokkos is good enough
